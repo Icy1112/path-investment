@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import Login from './Login'
 import Header from './Header';
+import Home from './Home';
 
 function App() {
   return ( 
@@ -9,15 +10,16 @@ function App() {
      <BrowserRouter>
      <div>         
         <div className="content">
+             <Header/>
             <Routes>
+              <Route exact path ="/" element={<Home/>} />
               <Route path="/login" element={<Login/>} />
-              <Route path="/header" element={<Header/>} />
             </Routes>
           </div>
      </div>
      </BrowserRouter>
-   </div> 
-  );
+   </div>
+  )
 }
 
-export default App;
+export default App

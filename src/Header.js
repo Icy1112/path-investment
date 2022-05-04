@@ -1,6 +1,7 @@
 import { makeStyles, Toolbar, Button, AppBar } from "@material-ui/core";
 import React from "react";
-import {withRouter} from 'react-router-dom'
+import { Marginer } from "../src/components/marginer";
+
 const headerData = [
     {
         label: "Home",
@@ -84,7 +85,11 @@ const displayDesktop = () => {
 
     return (
         <header>
-          <AppBar className={header}>{displayDesktop()}</AppBar>
+          <AppBar className={header}>
+              {displayDesktop()}
+              </AppBar>
+          <Marginer direction="vertical" margin="5em" />
+          
         </header>
     )
 }
