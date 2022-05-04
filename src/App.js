@@ -1,22 +1,25 @@
 import './App.css';
-import styled from 'styled-components';
-import { AccountBox } from './components/accountBox';
-
-const AppContainer = styled.div`
-  width: 100%;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  `;
+import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
+import Login from './Login'
+import Header from './Header';
+import Home from './Home';
 
 function App() {
   return ( 
-  <AppContainer>
-    <AccountBox />
-  </AppContainer>
-  );
+   <div className='App'>
+     <BrowserRouter>
+     <div>         
+        <div className="content">
+             <Header/>
+            <Routes>
+              <Route exact path ="/" element={<Home/>} />
+              <Route path="/login" element={<Login/>} />
+            </Routes>
+          </div>
+     </div>
+     </BrowserRouter>
+   </div>
+  )
 }
 
-export default App;
+export default App
