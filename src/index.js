@@ -15,3 +15,6 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/my_database', {userNewUrlParser:true})
