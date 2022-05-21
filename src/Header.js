@@ -77,7 +77,6 @@ const displayDesktop = () => {
         }
         )
     }
-    console.log("Isaac", getMenuButtons())
     //handle click event of logout button
     const handleLogout = () => {
         props.history.push('/')
